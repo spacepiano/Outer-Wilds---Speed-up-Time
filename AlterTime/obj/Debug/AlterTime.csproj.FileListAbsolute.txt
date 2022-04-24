@@ -1,0 +1,10 @@
+C:\Users\Raffe\AppData\Roaming\OuterWildsModManager\OWML\Mods\Spacepiano.RemoveUI\default-config.json
+C:\Users\Raffe\AppData\Roaming\OuterWildsModManager\OWML\Mods\Spacepiano.RemoveUI\manifest.json
+C:\Users\Raffe\AppData\Roaming\OuterWildsModManager\OWML\Mods\Spacepiano.RemoveUI\AlterTime.dll
+C:\Users\Raffe\AppData\Roaming\OuterWildsModManager\OWML\Mods\Spacepiano.RemoveUI\AlterTime.pdb
+D:\Users\Raffe\Documents\OW Mods\ModInnit\obj\Debug\AlterTime.csprojAssemblyReference.cache
+D:\Users\Raffe\Documents\OW Mods\ModInnit\obj\Debug\AlterTime.AssemblyInfoInputs.cache
+D:\Users\Raffe\Documents\OW Mods\ModInnit\obj\Debug\AlterTime.AssemblyInfo.cs
+D:\Users\Raffe\Documents\OW Mods\ModInnit\obj\Debug\AlterTime.csproj.CoreCompileInputs.cache
+D:\Users\Raffe\Documents\OW Mods\ModInnit\obj\Debug\AlterTime.dll
+D:\Users\Raffe\Documents\OW Mods\ModInnit\obj\Debug\AlterTime.pdb
