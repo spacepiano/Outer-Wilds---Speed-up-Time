@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using OWML.Common;
 using OWML.ModHelper;
 using UnityEngine;
@@ -14,30 +14,11 @@ namespace ModTemplate
 
         private void Awake()
         {
-            // You won't be able to access OWML's mod helper in Awake.
-            // So you probably don't want to do anything here.
-            // Use Start() instead.
         }
 
         private void Start()
         {
-
-
-            // Starting here, you'll have access to OWML's mod helper.
-
-            ModHelper.Console.WriteLine($"My mod {nameof(ModTemplate)} is loaded!", MessageType.Success);
-            
-
-
-            // Example of accessing game code.
-            LoadManager.OnCompleteSceneLoad += (scene, loadScene) =>
-            {
-                if (loadScene != OWScene.SolarSystem) return;
-                var playerBody = FindObjectOfType<PlayerBody>();
-                ModHelper.Console.WriteLine($"Found player body, and it's called {playerBody.name}!",
-                    MessageType.Success);
-
-
+            ModHelper.Console.WriteLine($"Outer Wilds - Speed up Time loaded.", MessageType.Success);
             };
         }
 
@@ -64,7 +45,7 @@ namespace ModTemplate
             {
                 Time.timeScale = 4;
             }
-            if (Keyboard.current[Key.Numpad4].wasPressedThisFrame)
+            if (Keyboard.current[Key.Numpad5].wasPressedThisFrame)
             {
                 Time.timeScale = 5;
             }
