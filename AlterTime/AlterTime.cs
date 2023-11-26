@@ -1,54 +1,39 @@
-using System;
 using OWML.Common;
 using OWML.ModHelper;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.PostProcessing;
-using UnityEngine.SceneManagement;
 
-namespace ModTemplate
+namespace AlterTime;
+
+public class AlterTime : ModBehaviour
 {
-    public class AlterTime : ModBehaviour
-    {
-        
+	public Dictionary<(Key key, Key numpadKey), int> timescales = new()
+	{
+		{ (Key.Digit0, Key.Numpad0), 0 },
+		{ (Key.Digit1, Key.Numpad1), 1 },
+		{ (Key.Digit2, Key.Numpad2), 2 },
+		{ (Key.Digit3, Key.Numpad3), 3 },
+		{ (Key.Digit4, Key.Numpad4), 4 }
+	};
 
-        private void Awake()
-        {
-        }
+	public void Start()
+	{
+		ModHelper.Console.WriteLine($"Outer Wilds - Alter Time loaded.", MessageType.Success);
+	}
 
-        private void Start()
-        {
-            ModHelper.Console.WriteLine($"Outer Wilds - Speed up Time loaded.", MessageType.Success);
-            };
-        }
+	public void Update()
+	{
+		foreach (var val in timescales)
+		{
+			var digit = val.Key.key;
+			var numpadKey = val.Key.numpadKey;
+			var timescale = val.Value;
 
-        [Obsolete]
-        void Update()
-        { 
-            if (Keyboard.current[Key.Numpad0].wasReleasedThisFrame) 
-            {
-                Time.timeScale = 0;
-            }
-            if (Keyboard.current[Key.Numpad1].wasPressedThisFrame) 
-            {
-                Time.timeScale = 1;
-            }
-            if (Keyboard.current[Key.Numpad2].wasPressedThisFrame)
-            {
-                Time.timeScale = 2;
-            }
-            if (Keyboard.current[Key.Numpad3].wasPressedThisFrame)
-            {
-                Time.timeScale = 3;
-            }
-            if (Keyboard.current[Key.Numpad4].wasPressedThisFrame)
-            {
-                Time.timeScale = 4;
-            }
-            if (Keyboard.current[Key.Numpad5].wasPressedThisFrame)
-            {
-                Time.timeScale = 5;
-            }
-        }
-    }
+			if (Keyboard.current[digit].wasReleasedThisFrame || Keyboard.current[numpadKey].wasReleasedThisFrame)
+			{
+				Time.timeScale = timescale;
+			}
+		}
+	}
 }
