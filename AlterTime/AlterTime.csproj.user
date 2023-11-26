@@ -1,5 +1,5 @@
 ﻿<Project>
   <PropertyGroup>
-    <OutputPath>$(AppData)\OuterWildsModManager\OWML\Mods\Spacepiano.RemoveUI</OutputPath>
+    <OutputPath>$(AppData)\OuterWildsModManager\OWML\Mods\Spacepiano.AlterTime</OutputPath>
   </PropertyGroup>
 </Project>

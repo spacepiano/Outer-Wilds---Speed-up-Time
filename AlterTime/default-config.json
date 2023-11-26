@@ -1,15 +1,12 @@
 {
-  "enabled": true,
-  "settings":{
-	"AlterTime": {
+	"enabled": true,
+	"settings": {
+		"AlterTime": {
 			"type": "toggle",
 			"value": true,
 			"yes": "Sure thing!",
 			"no": "Nope!",
 			"title": "Disable UI"
 		}
-			
 	}
-
-
 }
