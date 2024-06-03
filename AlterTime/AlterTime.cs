@@ -14,7 +14,8 @@ public class AlterTime : ModBehaviour
 		{ (Key.Digit1, Key.Numpad1), 1 },
 		{ (Key.Digit2, Key.Numpad2), 2 },
 		{ (Key.Digit3, Key.Numpad3), 3 },
-		{ (Key.Digit4, Key.Numpad4), 4 }
+		{ (Key.Digit4, Key.Numpad4), 4 },
+  		{ (Key.Digit5, Key.Numpad5), 10 }
 	};
 
 	public void Start()
