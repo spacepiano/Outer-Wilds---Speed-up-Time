@@ -14,8 +14,8 @@ permissions:
   contents: write
 
 env:
-  PROJ_USERNAME: Eztainu
-  PROJ_NAME: OW_Euskaraz_Mod
+  PROJ_USERNAME: Spacepiano
+  PROJ_NAME: AlterTime
 
 jobs:
   pre_job:
