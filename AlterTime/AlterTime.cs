@@ -31,7 +31,7 @@ public class AlterTime : ModBehaviour
 	{
 		foreach (var val in timescales)
 		{
-			/*var digit = val.Key.key;*/ 
+			var digit = val.Key.key;
 			var numpadKey = val.Key.numpadKey;
 			var timescale = val.Value;
 
