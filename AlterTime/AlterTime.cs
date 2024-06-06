@@ -22,9 +22,18 @@ public class AlterTime : ModBehaviour
 		{ (Key.Digit9,  Key.Numpad9), 9 }
 	};
 
+	public bool AllowDigitKeys { get; private set; }
+	public bool AllowNumpadKeys { get; private set; } = true;
+
 	public void Start()
 	{
 		ModHelper.Console.WriteLine($"Outer Wilds - Alter Time loaded.", MessageType.Success);
+	}
+
+	public override void Configure(IModConfig config)
+	{
+		AllowDigitKeys = config.GetSettingsValue<bool>("AllowDigitKeys");
+		AllowNumpadKeys = config.GetSettingsValue<bool>("AllowNumpadKeys");
 	}
 
 	public void Update()
@@ -35,7 +44,7 @@ public class AlterTime : ModBehaviour
 			var numpadKey = val.Key.numpadKey;
 			var timescale = val.Value;
 
-			if (/*Keyboard.current[digit].wasReleasedThisFrame ||*/ Keyboard.current[numpadKey].wasReleasedThisFrame)
+			if ((AllowDigitKeys && Keyboard.current[digit].wasReleasedThisFrame) || (AllowNumpadKeys && Keyboard.current[numpadKey].wasReleasedThisFrame))
 			{
 				Time.timeScale = timescale;
 			}
